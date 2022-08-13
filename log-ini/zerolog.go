@@ -1,4 +1,4 @@
-package log
+package log_ini
 
 import (
 	"github.com/rs/zerolog"
@@ -30,7 +30,6 @@ func SetLogLevel() {
 		}
 	}
 	zerolog.SetGlobalLevel(level)
-	//日志设置往下级别越高，例如设置 info级别，只会显示info,warn,error,fatal,panic级别日志
 	log.Debug().Str("log_level", level.String()).Msgf("the log level will be set as %s", env) //不会打印出来此条日志
 	log.Info().Str("log_level", level.String()).Msgf("the log level will be set as %s", env)
 	log.Error().Str("log_level", level.String()).Msgf("the log level will be set as %s", env)

@@ -1,2 +1,19 @@
 LOG_LEVEL : ERROR
 RUN_MODE: DEV
+
+mongo:
+  uri: "mongodb://127.0.0.1:27017"
+  dbs: # 用到的db names
+    db1 : "db1"
+
+redis:
+  addr: "127.0.0.1:6379"
+  password: ""
+  db: 0
+
+
+mysql:
+  endpoint: "root:980531@tcp(127.0.0.1:3306)/blog?charset=utf8mb4&parseTime=true"
+  max_life_time: "5m"
+  max_open_conn: 20
+  max_idle_conn: 5
